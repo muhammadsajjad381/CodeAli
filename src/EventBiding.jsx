@@ -10,9 +10,9 @@ const EventBinding = () => {
     alert(`Hello ${name}! Ye data function mein pass hua hai.`);
   };
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+//   const handleInputChange = (event) => {
+//     setInputValue(event.target.value);
+//   };
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
@@ -38,9 +38,9 @@ const EventBinding = () => {
         <input 
           type="text" 
           placeholder="Yahan kuch type karein..." 
-          onChange={handleInputChange} 
+          onChange={(e) => setInputValue(e.target.value)} 
         />
-        <p>Aapne type kiya: <strong>{inputValue}</strong></p>
+        <p>You type here <strong>{inputValue}</strong></p>
       </section>
     </div>
   );
